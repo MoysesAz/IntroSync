@@ -143,9 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				95D0E6F82A52413E003B0F1B /* ReactiveFlow */,
-				95D0E7062A524159003B0F1B /* Reatividade */,
+				95D0E7062A524159003B0F1B /* Data */,
 				95D0E7102A524159003B0F1B /* ReatividadeTests */,
-				95D0E7272A524DD4003B0F1B /* Sync */,
+				95D0E7272A524DD4003B0F1B /* ReactiveFlowMobile */,
 				95D0E6F72A52413E003B0F1B /* Products */,
 				95D0E71C2A52429B003B0F1B /* Frameworks */,
 			);
@@ -170,13 +170,13 @@
 			path = ReactiveFlow;
 			sourceTree = "<group>";
 		};
-		95D0E7062A524159003B0F1B /* Reatividade */ = {
+		95D0E7062A524159003B0F1B /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				95D0E7072A524159003B0F1B /* Reatividade.h */,
 				95D0E71A2A524177003B0F1B /* FakeAPI.swift */,
 			);
-			path = Reatividade;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		95D0E7102A524159003B0F1B /* ReatividadeTests */ = {
@@ -194,7 +194,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		95D0E7272A524DD4003B0F1B /* Sync */ = {
+		95D0E7272A524DD4003B0F1B /* ReactiveFlowMobile */ = {
 			isa = PBXGroup;
 			children = (
 				95EB1E182A550237002C2977 /* Presenter  */,
@@ -205,7 +205,7 @@
 				95D0E7332A524DD4003B0F1B /* LaunchScreen.storyboard */,
 				95D0E7362A524DD4003B0F1B /* Info.plist */,
 			);
-			path = Sync;
+			path = ReactiveFlowMobile;
 			sourceTree = "<group>";
 		};
 		95EB1E112A5492DF002C2977 /* Utils */ = {
