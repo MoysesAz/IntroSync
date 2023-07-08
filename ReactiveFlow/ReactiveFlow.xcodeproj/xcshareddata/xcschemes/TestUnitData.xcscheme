@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "95D0E7252A524DD4003B0F1B"
-               BuildableName = "Sync.app"
-               BlueprintName = "Sync"
+               BlueprintIdentifier = "95D0E7042A524159003B0F1B"
+               BuildableName = "Reatividade.framework"
+               BlueprintName = "Reatividade"
                ReferencedContainer = "container:ReactiveFlow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +28,19 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "95D0E70B2A524159003B0F1B"
+               BuildableName = "ReatividadeTests.xctest"
+               BlueprintName = "ReatividadeTests"
+               ReferencedContainer = "container:ReactiveFlow.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -39,16 +52,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "95D0E7252A524DD4003B0F1B"
-            BuildableName = "Sync.app"
-            BlueprintName = "Sync"
-            ReferencedContainer = "container:ReactiveFlow.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -56,16 +59,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "95D0E7252A524DD4003B0F1B"
-            BuildableName = "Sync.app"
-            BlueprintName = "Sync"
+            BlueprintIdentifier = "95D0E7042A524159003B0F1B"
+            BuildableName = "Reatividade.framework"
+            BlueprintName = "Reatividade"
             ReferencedContainer = "container:ReactiveFlow.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

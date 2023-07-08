@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Reatividade
+@testable import Data
 
 final class ReatividadeTests: XCTestCase {
 

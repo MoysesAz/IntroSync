@@ -12,7 +12,7 @@ public class FakeApi {
 
     public func mockApi(completion: @escaping ([String]?) -> ()) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
-            let apiResponse: [String]? = ["Name: Moyses, "]
+            let apiResponse: [String]? = ["Name: Moyses, age: 3500"]
             completion(apiResponse)
         }
     }
