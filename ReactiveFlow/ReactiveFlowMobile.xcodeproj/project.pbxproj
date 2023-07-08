@@ -142,10 +142,10 @@
 		95D0E6ED2A52413E003B0F1B = {
 			isa = PBXGroup;
 			children = (
-				95D0E6F82A52413E003B0F1B /* ReactiveFlow */,
 				95D0E7062A524159003B0F1B /* Data */,
-				95D0E7102A524159003B0F1B /* ReatividadeTests */,
 				95D0E7272A524DD4003B0F1B /* ReactiveFlowMobile */,
+				95D0E6F82A52413E003B0F1B /* ReactiveFlow */,
+				95D0E7102A524159003B0F1B /* ReatividadeTests */,
 				95D0E6F72A52413E003B0F1B /* Products */,
 				95D0E71C2A52429B003B0F1B /* Frameworks */,
 			);
@@ -339,7 +339,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 95D0E6F12A52413E003B0F1B /* Build configuration list for PBXProject "ReactiveFlow" */;
+			buildConfigurationList = 95D0E6F12A52413E003B0F1B /* Build configuration list for PBXProject "ReactiveFlowMobile" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -717,7 +717,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35GM6XG62S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RaidSync/Info.plist;
+				INFOPLIST_FILE = ReactiveFlowMobile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -747,7 +747,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35GM6XG62S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RaidSync/Info.plist;
+				INFOPLIST_FILE = ReactiveFlowMobile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -772,7 +772,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95D0E6F12A52413E003B0F1B /* Build configuration list for PBXProject "ReactiveFlow" */ = {
+		95D0E6F12A52413E003B0F1B /* Build configuration list for PBXProject "ReactiveFlowMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95D0E6FB2A52413E003B0F1B /* Debug */,

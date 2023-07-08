@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Reatividade
+import Data
 
 let instanceApi = FakeApi()
 

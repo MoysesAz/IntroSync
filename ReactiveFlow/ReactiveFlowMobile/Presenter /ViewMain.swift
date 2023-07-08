@@ -8,12 +8,34 @@
 import UIKit
 
 class ViewMain: UIView {
-    lazy var text: UITextView = {
-        let text = UITextView()
+    lazy var text: UILabel = {
+        let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.font = UIFont.systemFont(ofSize: 16)
-        text.textColor = .red
+        text.textAlignment = .center
+        text.backgroundColor = .white
+        text.textColor = .black
         return text
+    }()
+
+    lazy var buttonSync: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemBlue
+        button.setTitle("Sync", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitleColor(.white, for: .normal)
+        return button
+    }()
+
+    lazy var buttonAsync: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemGreen
+        button.setTitle("Async", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitleColor(.white, for: .normal)
+        return button
     }()
 
     lazy var loading: UIActivityIndicatorView = {
@@ -25,6 +47,7 @@ class ViewMain: UIView {
 
     override func willMove(toWindow newWindow: UIWindow?) {
         super.willMove(toWindow: newWindow)
+        backgroundColor = .systemGray6
         setupSubViews()
         setupConstraint()
     }
@@ -33,6 +56,8 @@ class ViewMain: UIView {
 extension ViewMain {
     func setupSubViews() {
         addSubview(text)
+        addSubview(buttonSync)
+        addSubview(buttonAsync)
         addSubview(loading)
     }
 
@@ -68,6 +93,8 @@ extension ViewMain {
 extension ViewMain {
     func setupConstraint() {
         textConstraints()
+        buttonSyncConstraints()
+        buttonAsyncConstraints()
         loadingConstraints()
     }
 
@@ -77,10 +104,33 @@ extension ViewMain {
                 text.centerXAnchor.constraint(equalTo: centerXAnchor),
                 text.centerYAnchor.constraint(equalTo: centerYAnchor),
                 text.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.05),
-                text.widthAnchor.constraint(equalTo: widthAnchor),
+                text.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
             ]
         )
     }
+
+    func buttonSyncConstraints() {
+        NSLayoutConstraint.activate(
+            [
+                buttonSync.rightAnchor.constraint(equalTo: centerXAnchor, constant: -5),
+                buttonSync.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 50),
+                buttonSync.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.05),
+                buttonSync.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25),
+            ]
+        )
+    }
+
+    func buttonAsyncConstraints() {
+        NSLayoutConstraint.activate(
+            [
+                buttonAsync.leftAnchor.constraint(equalTo: centerXAnchor, constant: 5),
+                buttonAsync.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 50),
+                buttonAsync.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.05),
+                buttonAsync.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25),
+            ]
+        )
+    }
+
 
     func loadingConstraints() {
         NSLayoutConstraint.activate(
