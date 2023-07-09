@@ -25,6 +25,7 @@ class ViewMain: UIView {
         button.setTitle("Sync", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(buttonSyncEvent), for: .touchUpInside)
         return button
     }()
 
@@ -34,6 +35,7 @@ class ViewMain: UIView {
         button.backgroundColor = .systemGreen
         button.setTitle("Async", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(buttonAsyncEvent), for: .touchUpInside)
         button.setTitleColor(.white, for: .normal)
         return button
     }()
@@ -44,6 +46,8 @@ class ViewMain: UIView {
         return loading
     }()
 
+    var delegate: ViewModelDelegate?
+
 
     override func willMove(toWindow newWindow: UIWindow?) {
         super.willMove(toWindow: newWindow)
@@ -51,14 +55,20 @@ class ViewMain: UIView {
         setupSubViews()
         setupConstraint()
     }
+
 }
 
+
+
 extension ViewMain {
-    func setupSubViews() {
-        addSubview(text)
-        addSubview(buttonSync)
-        addSubview(buttonAsync)
-        addSubview(loading)
+    @objc func buttonSyncEvent() {
+        let value = delegate?.randomResponse()
+        text.text = value?.first!
+    }
+    
+
+    @objc func buttonAsyncEvent() {
+        delegate?.getDataInApi()
     }
 
     func configText(_ value: [String]?) {
@@ -86,6 +96,15 @@ extension ViewMain {
             }
         }
 
+    }
+}
+
+extension ViewMain {
+    func setupSubViews() {
+        addSubview(text)
+        addSubview(buttonSync)
+        addSubview(buttonAsync)
+        addSubview(loading)
     }
 }
 

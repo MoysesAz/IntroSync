@@ -18,14 +18,22 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        viewModel.isLoading.bind {value in
-            self.content.loading(value)
-        }
-        viewModel.isApi.bind { value in
-            self.content.configText(value)
-            self.viewModel.isLoading.value = false
-        }
-        viewModel.getData()
+        setupBinders()
+        setupDelegates()
+    }
+
+    private func setup() {
+        setupDelegates()
+        setupBinders()
+    }
+
+    private func setupDelegates() {
+        content.delegate = viewModel
+    }
+
+    private func setupBinders() {
+        viewModel.isApi.bind(content.configText)
+        viewModel.isLoading.bind(content.loading)
     }
 }
+
