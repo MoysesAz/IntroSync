@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    let content = ViewMain()
-    let viewModel = ViewModel()
+class HomeController: UIViewController {
+    let content = HomeView()
+    let viewModel = HomeViewModel()
 
     override func loadView() {
         super.loadView()

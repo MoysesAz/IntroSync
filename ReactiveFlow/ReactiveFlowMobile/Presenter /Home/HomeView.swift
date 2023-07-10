@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewMain: UIView {
+class HomeView: UIView {
     lazy var text: UILabel = {
         let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +46,7 @@ class ViewMain: UIView {
         return loading
     }()
 
-    var delegate: ViewModelDelegate?
+    var delegate: HomeViewModelDelegate?
 
 
     override func willMove(toWindow newWindow: UIWindow?) {
@@ -60,9 +60,9 @@ class ViewMain: UIView {
 
 
 
-extension ViewMain {
+extension HomeView {
     @objc func buttonSyncEvent() {
-        let value = delegate?.randomResponse()
+        let value = delegate?.responseSync()
         text.text = value?.first!
     }
     
@@ -99,7 +99,7 @@ extension ViewMain {
     }
 }
 
-extension ViewMain {
+extension HomeView {
     func setupSubViews() {
         addSubview(text)
         addSubview(buttonSync)
@@ -109,7 +109,7 @@ extension ViewMain {
 }
 
 
-extension ViewMain {
+extension HomeView {
     func setupConstraint() {
         textConstraints()
         buttonSyncConstraints()

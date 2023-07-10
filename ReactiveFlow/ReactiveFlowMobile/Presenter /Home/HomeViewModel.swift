@@ -8,12 +8,12 @@
 import Foundation
 import Data
 
-protocol ViewModelDelegate: AnyObject {
-    func randomResponse() -> [String]
+protocol HomeViewModelDelegate: AnyObject {
+    func responseSync() -> [String]
     func getDataInApi() 
 }
 
-class ViewModel: ViewModelDelegate {
+class HomeViewModel: HomeViewModelDelegate {
     var api: FakeApi = FakeApi()
     var isLoading: Observable<Bool> = Observable(false)
     var isApi: Observable<[String]> = Observable(nil)
@@ -29,14 +29,7 @@ class ViewModel: ViewModelDelegate {
         }
     }
 
-    public func randomResponse() -> [String] {
-        let responses = ["name: Flavia, age: 90",
-                         "name: Carolina, age: 399",
-                         "name: Karl, age: 1800",
-                         "name: Andre, age: 100",
-                         "name: Berb, age: 10",
-                         "name: Afonse, age: 150"]
-        let response = responses.randomElement()!
-        return [response]
+    public func responseSync() -> [String] {
+        return ["Response Sync"]
     }
 }
