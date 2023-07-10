@@ -81,7 +81,6 @@ extension HomeView {
         guard let value else {
             return
         }
-
         if value {
             DispatchQueue.main.async {
                 self.text.isHidden = true

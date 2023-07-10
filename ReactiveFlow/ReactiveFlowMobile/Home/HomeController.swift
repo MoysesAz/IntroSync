@@ -18,8 +18,7 @@ class HomeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBinders()
-        setupDelegates()
+        setup()
     }
 
     private func setup() {

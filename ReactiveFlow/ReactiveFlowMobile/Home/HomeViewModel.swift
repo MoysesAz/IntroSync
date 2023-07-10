@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Data
 
 protocol HomeViewModelDelegate: AnyObject {
     func responseSync() -> [String]
@@ -33,3 +32,4 @@ class HomeViewModel: HomeViewModelDelegate {
         return ["Response Sync"]
     }
 }
+
